@@ -40,9 +40,10 @@ body {
         list-style-type: none;
 
         .list-item {
-            margin-left: 2.5rem;
+            margin-left: 3rem;
             font-size: 1.4rem;
             color: var(--grayishBlue);
+            border-block-end: medium solid 2px;
         }
     }
 
@@ -211,7 +212,7 @@ body {
     &__card-wrapper {
         display: flex;
         gap: 3rem;
-        box-sizing: border-box;
+        justify-content: space-between;
     }
 
     &__card {
@@ -263,4 +264,77 @@ body {
 
 .footer {
     background-color: var(--darkBlue);
+    padding: 4.8rem 16.5rem;
+    display: grid;
+    grid-template-columns: 31.5rem 16rem 16rem 47.5rem;
+    justify-content: space-between;
+    gap: 13.1rem 3rem 25.5rem;
+
+    &__social-icons-wrapper {
+        margin: 2.75rem 0 0 0;
+        display: flex;
+        img {
+            margin-right: 1.333rem;
+        }
+    }
+
+    &__logo {
+        margin: 0 13.1rem 2.75rem 0;
+    }
+
+    &__links-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__links {
+        color: var(--white);
+        text-decoration: none;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+        /* identical to box height, or 173% */
+
+        letter-spacing: -0.234375px;
+    }
+
+    &__links:nth-child(2) {
+        margin: 0.8rem 0;
+    }
+
+    &__cta {
+        justify-self: flex-end;
+    }
+
+    &__btn.btn--cta {
+        padding: 1.25rem 3.3rem;
+        background: linear-gradient(
+            135deg,
+            var(--limeGreen) 0%,
+            var(--brightCyan) 100%
+        );
+        border: none;
+        border-radius: 35px;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        -ms-border-radius: 35px;
+        -o-border-radius: 35px;
+        color: var(--white);
+        font-family: 'Public Sans', sans-serif;
+        text-decoration: inherit;
+        font-size: 1.4rem;
+    }
+
+    &__copyright {
+        margin-top: 2.4rem;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+        /* identical to box height, or 173% */
+        color: var(--grayishBlue);
+        text-align: right;
+        letter-spacing: -0.234375px;
+    }
 }
