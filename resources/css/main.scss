@@ -1,0 +1,89 @@
+:root {
+    --darkBlue: hsl(233, 26%, 24%);
+    --limeGreen: hsl(136, 65%, 51%);
+    --brightCyan: hsl(192, 70%, 51%);
+    --grayishBlue: hsl(233, 8%, 62%);
+    --lightGrayishBlue: hsl(220, 16%, 96%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --baseFontSize: 1.8rem;
+    --smallFontSize: 1.4rem;
+    --bigFontSize: 3.5rem;
+    --largeFontSize: 4rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+}
+
+.nav {
+    padding: 2.5rem 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: var(--white);
+    z-index: 10;
+
+    &__ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+
+        .list-item {
+            margin-left: 2.5rem;
+            font-size: 1.4rem;
+            color: var(--grayishBlue);
+        }
+    }
+
+    &__btn.btn--cta {
+        padding: 1rem 2.25rem;
+        background: linear-gradient(
+            90deg,
+            var(--limeGreen) 0%,
+            var(--brightCyan) 100%
+        );
+        border: none;
+        border-radius: 35px;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        -ms-border-radius: 35px;
+        -o-border-radius: 35px;
+        color: var(--white);
+        font-family: 'Public Sans', sans-serif;
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 7rem;
+
+    &__image-container {
+        background-image: url('../images/bg-intro-desktop.svg');
+        background-position: bottom left;
+        background-size: inherit;
+        background-repeat: no-repeat;
+        height: 80vh;
+    }
+    &__image {
+        object-fit: contain;
+        position: relative;
+        right: -200px;
+        top: -120px;
+    }
+}
+
+.footer {
+    background-color: var(--darkBlue);
+}
