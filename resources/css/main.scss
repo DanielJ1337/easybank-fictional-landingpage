@@ -1,6 +1,7 @@
 :root {
     --darkBlue: hsl(233, 26%, 24%);
     --limeGreen: hsl(136, 65%, 51%);
+    --hoverGreen: hsl(158, 61%, 49%);
     --brightCyan: hsl(192, 70%, 51%);
     --grayishBlue: hsl(233, 8%, 62%);
     --lightGrayishBlue: hsl(220, 16%, 96%);
@@ -64,6 +65,21 @@ body {
         font-family: 'Public Sans', sans-serif;
         font-size: 1.4rem;
     }
+
+    &__btn.btn--cta {
+        cursor: pointer;
+    }
+
+    &__hamburger-menu {
+        display: none;
+        flex-direction: column;
+        span {
+            height: 0.1rem;
+            width: 2.4rem;
+            background-color: var(--darkBlue);
+            margin: 4px;
+        }
+    }
 }
 
 .hero {
@@ -73,7 +89,7 @@ body {
     background-color: var(--veryLightGray);
     overflow-y: visible;
     position: relative;
-    height: 75vh;
+    height: 69vh;
 
     &__heading {
         font-size: 5.6rem;
@@ -90,7 +106,7 @@ body {
         font-size: 1.8rem;
         line-height: 156%;
         margin: 2.4rem 0 3.6rem;
-        width: 44.7rem;
+        width: 95%;
         color: var(--grayishBlue);
         /* or 156% */
 
@@ -115,12 +131,17 @@ body {
         text-decoration: inherit;
         font-size: 1.4rem;
     }
+
+    &__btn.btn--cta:hover {
+        cursor: pointer;
+    }
+
     &__image-container {
         background-image: url('../images/bg-intro-desktop.svg');
         background-position: bottom left;
-        background-size: inherit;
+        background-size: cover;
         background-repeat: no-repeat;
-        height: 90vh;
+        height: 85vh;
     }
     &__image {
         object-fit: cover;
@@ -142,6 +163,7 @@ body {
         font-weight: 300;
         font-size: 4rem;
         line-height: 6.4rem;
+
         /* identical to box height, or 160% */
         letter-spacing: -0.714286px;
         color: #2d314d;
@@ -223,9 +245,6 @@ body {
         & .card__info {
             padding: 2.5rem 2.4rem;
 
-            & .card__author-info {
-            }
-
             & .card__heading {
                 margin: 0.8rem 0;
                 font-style: normal;
@@ -282,7 +301,8 @@ body {
         margin: 0 13.1rem 2.75rem 0;
     }
 
-    &__links-container {
+    &__links-container-1,
+    &__links-container-2 {
         display: flex;
         flex-direction: column;
     }
@@ -301,6 +321,10 @@ body {
 
     &__links:nth-child(2) {
         margin: 0.8rem 0;
+    }
+
+    &__links:hover {
+        color: var(--hoverGreen);
     }
 
     &__cta {
@@ -324,6 +348,13 @@ body {
         font-family: 'Public Sans', sans-serif;
         text-decoration: inherit;
         font-size: 1.4rem;
+        margin-left: 27%;
+    }
+
+    &__btn.btn--cta:hover {
+        cursor: pointer;
+        -webkit-box-shadow: 0px 5px 11px -3px #000000;
+        box-shadow: 0px 5px 11px -3px #000000;
     }
 
     &__copyright {
@@ -336,5 +367,130 @@ body {
         color: var(--grayishBlue);
         text-align: right;
         letter-spacing: -0.234375px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .nav {
+        padding: 2.5rem 2.4rem;
+        justify-content: space-between;
+        &__ul {
+            display: none;
+        }
+        &__cta-container {
+            display: none;
+        }
+
+        &__hamburger-menu {
+            display: flex;
+        }
+    }
+
+    .hero {
+        padding: 4rem 0;
+        flex-direction: column-reverse;
+
+        &__image {
+            width: 100%;
+            margin: auto;
+            position: inherit;
+        }
+
+        &__text-container {
+            text-align: center;
+            padding: 3rem 0 0 0;
+        }
+
+        &__heading {
+            font-size: 4rem;
+        }
+
+        &__slogan {
+            font-size: 1.5rem;
+            width: 95%;
+            margin: 3rem auto;
+        }
+    }
+
+    .usp {
+        padding: 5rem 1.75rem;
+        text-align: center;
+
+        &__heading {
+            font-size: 3.2rem;
+        }
+
+        &__description {
+            font-size: 1.5rem;
+            width: auto;
+        }
+
+        &__cards-wrapper {
+            padding: 0;
+            flex-direction: column;
+
+            & .card {
+                &__heading {
+                    font-size: 2rem;
+                }
+
+                &__description {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .articles {
+        padding: 3rem 0;
+
+        &__heading {
+            font-size: 3.2rem;
+            text-align: center;
+        }
+        &__card-wrapper {
+            flex-direction: column;
+            width: 90%;
+            margin: auto;
+        }
+
+        &__card {
+            width: auto;
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 0;
+
+        &__logo {
+            margin: 0;
+        }
+
+        &__links-container-1 {
+            margin-top: 3.5rem;
+        }
+
+        &__links-container-2 {
+            margin-top: 1rem;
+        }
+
+        &__btn.btn--cta {
+            margin: 2.75rem 0 0;
+        }
+
+        &__social-icons-wrapper {
+            justify-content: center;
+
+            img {
+                margin-left: 1.333rem;
+            }
+        }
+
+        &__copyright {
+            text-align: center;
+        }
     }
 }
