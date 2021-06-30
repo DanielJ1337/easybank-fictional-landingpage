@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./resources/css/main.css">
+  <script src="./resources/js/script.js" defer></script>
 
   <title>Frontend Mentor | Easybank landing page</title>
 
@@ -20,13 +21,13 @@
       <div class="nav__image-container">
         <img src="./resources/images/logo.svg" alt="logo">
       </div>
-      <div class="nav__ul">
+      <ul class="nav__ul">
         <li class="list-item">Home</li>
         <li class="list-item">About</li>
         <li class="list-item">Contact</li>
         <li class="list-item">Blog</li>
         <li class="list-item">Careers</li>
-      </div>
+      </ul>
 
       <div class="nav__cta-container">
         <button class="nav__btn btn--cta">
@@ -34,9 +35,12 @@
         </button>
       </div>
 
+      <!-- <label class="nav__burger-label" for="burger">
+        <input type="checkbox" id="burger"> -->
       <div class="nav__hamburger-menu">
         <span></span><span></span><span></span>
       </div>
+      <!-- </label> -->
     </nav>
   </header>
   <main>
@@ -211,6 +215,11 @@
     <div class="footer__cta">
       <button class="footer__btn btn--cta">Request Invite</button>
       <p class="footer__copyright">&copy Easybank. All Rights Reserved</p>
+    </div>
+
+    <div class="footer__attribution">
+      <p>Coded by <a href="https://github.com/danielj1337">Daniel Juergens</a> on <a
+          href="https://frontendmentor.io">Frontend Mentor</a></p>
     </div>
   </footer>
 </body>
